@@ -22,5 +22,3 @@ class TestSwitchPage:
         switch_page.click_on_constructor_button()
         result = switch_page.find_text_make_burger()
         assert result == data.MAKE_BURGER_TEXT
-
-#  тесты пройдены успешно

@@ -17,5 +17,3 @@ class TestAccountPage:
         account_page.click_on_exit_from_account_button()
         result = account_page.find_enter_button()
         assert result == data.ENTER_TEXT
-
-        # тесты пройдены успешно

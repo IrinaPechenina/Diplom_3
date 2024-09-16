@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    OVERLAY = By.XPATH, '//*[contains(@class, "Modal_modal__loading")]/following::*[@class="Modal_modal_overlay__x2ZCr"]'
+    OVERLAY = By.XPATH, '//*[contains(@class, "Modal_modal_overlay")]'
     BUN_N200I = By.XPATH, './/*[contains(@href, "61c0c5a71d1f82001bdaaa6c")]'  # Краторная булка
     DETAILS_POP_UP = By.XPATH, '//*[text()="Детали ингредиента"]'  #  Детали ингредиента
     POP_UP_OPENED = By.XPATH, './*[contains(@class,"Modal_modal_opened")]'  # всплывающее окно открыто

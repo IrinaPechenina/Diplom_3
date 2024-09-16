@@ -30,5 +30,3 @@ class TestMainPage:
         main_page.make_order()
         result = main_page.receive_order_in_work_text()
         assert result == data.ORDER_IN_WORK_TEXT
-
-#  тесты пройдены успешно

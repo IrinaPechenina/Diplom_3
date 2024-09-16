@@ -22,5 +22,3 @@ class TestPasswordRecoveryPage:
         password_recovery_page.click_on_action_icon_button()
         result = password_recovery_page.action_icon_button_on()
         assert result == data.PASSWORD_TEXT
-
-    # тесты пройдены успешно
