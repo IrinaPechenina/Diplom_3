@@ -2,7 +2,10 @@
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
 import allure
-
+from selenium.common import TimeoutException
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+import data
 
 class MainPage(BasePage):
 
@@ -47,6 +50,13 @@ class MainPage(BasePage):
 
     @allure.step('Закрыть окно с деталями заказа')
     def close_window_with_details(self):
-        self.wait_for_visibility(MainPageLocators.CLOSE_BUTTON_DETAILS)
+        # self.wait_for_visibility(MainPageLocators.CLOSE_BUTTON_DETAILS)
         self.click_on_element_with_wait(MainPageLocators.CLOSE_BUTTON_DETAILS)
 
+    @allure.step('Ожидание исчезновения модального окна')
+    def wait_for_overlay_disappearance(self):
+        try:
+            (WebDriverWait(self.driver, data.TIMEOUT_2).until_not
+             (expected_conditions.visibility_of_element_located(MainPageLocators.OVERLAY)))
+        except TimeoutException:
+            raise TimeoutException(f'Оверлей не исчезает, время ожидания:, {data.TIMEOUT_2}')

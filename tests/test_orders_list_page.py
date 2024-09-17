@@ -17,6 +17,7 @@ class TestOrderListPage:
         account_page.log_in()
         switch_page.click_on_constructor_button()
         main_page.make_order()
+        main_page.wait_for_overlay_disappearance()
         main_page.close_window_with_details()
         switch_page.click_on_orders_list_button()
         order_number_order_list = orders_list_page.receive_orders_number_from_order_list()

@@ -6,7 +6,7 @@ EMAIL = 'pechenina_99@gmail.com'
 PASSWORD = '123456'
 
 
-TIMEOUT = 20
+TIMEOUT = 10
 TIMEOUT_2 = 50
 ENTER_TEXT = 'Войти'
 RECOVER_TEXT = 'Восстановить'
